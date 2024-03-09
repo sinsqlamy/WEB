@@ -121,4 +121,13 @@ foreach ($array as $value) {
     }
 }
 echo "\nКоличество элементов для суммы > 10: $count";
+
+// 15
+function printStringReturnNumber($str) {
+    echo $str;
+    return intval($str);
+}
+
+$my_num = printStringReturnNumber("123");
+echo $my_num;
 ?>
