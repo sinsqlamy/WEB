@@ -130,4 +130,46 @@ function printStringReturnNumber($str) {
 
 $my_num = printStringReturnNumber("123");
 echo $my_num;
+
+// 16
+function increaseEnthusiasm($str) {
+    return $str . "!";
+}
+
+function repeatThreeTimes($str) {
+    return $str . $str . $str;
+}
+
+$string = "Li-Wi";
+echo increaseEnthusiasm($string) , "\n";
+echo repeatThreeTimes($string) , "\n";
+
+echo increaseEnthusiasm(repeatThreeTimes($string)) , "\n";
+
+function cut($str, $length = 10) {
+    return substr($str, 0, $length);
+}
+
+echo cut("pivo", 7) , "\n";
+
+function printArray($array, $index = 0) {
+    if ($index < count($array)) {
+        echo $array[$index] , "\n";
+        printArray($array, $index + 1);
+    }
+}
+
+$array = [1, 2, 0, 0, 4];
+printArray($array);
+
+function sumDigits($curr) {
+    $sum = array_sum(str_split($curr));
+    if ($sum > 9) {
+        return sumDigits($sum);
+    } else {
+        return $sum;
+    }
+}
+
+echo sumDigits(803) , "\n";
 ?>
