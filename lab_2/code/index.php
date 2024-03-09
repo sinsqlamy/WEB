@@ -172,4 +172,68 @@ function sumDigits($curr) {
 }
 
 echo sumDigits(803) , "\n";
+
+// 17
+
+// 1. Заполнение массива
+$array = [];
+for ($i = 1; $i <= 5; $i++) {
+    $array[] = str_repeat('x', $i);
+}
+print_r($array);
+
+// 2. Функция arrayFill
+function arrayFill($value, $count)
+{
+    return array_fill(0, $count, $value);
+}
+
+$resultArray = arrayFill('x', 5);
+print_r($resultArray);
+
+// 3. Нахождение суммы элементов двумерного массива
+$twoDimensionalArray = [[1, 2, 3], [4, 5], [6]];
+$sum = 0;
+foreach ($twoDimensionalArray as $subArray) {
+    $sum += array_sum($subArray);
+}
+echo "Сумма элементов двумерного массива: $sum\n";
+
+// 4. Создание массива [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+$array = [];
+$count = 1;
+for ($i = 0; $i < 3; $i++) {
+    $subArray = [];
+    for ($j = 0; $j < 3; $j++) {
+        $subArray[] = $count++;
+    }
+    $array[] = $subArray;
+}
+print_r($array);
+
+// 5. Умножение элементов массива
+$array = [2, 5, 3, 9];
+$result = ($array[0] * $array[1]) + ($array[2] * $array[3]);
+echo "Результат умножения элементов массива: $result\n";
+
+// 6. Вывод информации о пользователе
+$user = ['name' => 'John', 'surname' => 'Doe', 'patronymic' => 'Smith'];
+echo $user['surname'] . ' ' . $user['name'] . ' ' . $user['patronymic'] . "\n";
+
+// 7. Вывод даты
+$date = ['year' => date('Y'), 'month' => date('m'), 'day' => date('d')];
+echo "{$date['year']}-{$date['month']}-{$date['day']}\n";
+
+// 8. Вывод количества элементов в массиве
+$arr = ['a', 'b', 'c', 'd', 'e'];
+echo "Количество элементов в массиве: " . count($arr) . "\n";
+
+// 9. Вывод последнего элемента массива
+echo "Последний элемент массива: " . end($arr) . "\n";
+
+// 10. Вывод предпоследнего элемента массива
+prev($arr);
+echo "Предпоследний элемент массива: " . current($arr) . "\n";
+
+
 ?>
