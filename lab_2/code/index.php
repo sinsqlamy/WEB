@@ -48,4 +48,77 @@ $answer -= $my_num;
 
 echo $answer;
 
+// 14
+$a = 10;
+$b = 3;
+echo $a % $b;
+
+if ($a % $b == 0) {
+    echo "\nДелится: " . ($a / $b);
+} else {
+    echo "\nДелится с остатком: " . ($a % $b);
+}
+
+$st = 2 ** 10;
+echo "\n$st";
+echo "\n" . sqrt(245);
+
+$array = [4, 2, 5, 19, 13, 0, 10];
+$sum = 0;
+foreach ($array as $value) {
+    $sum += $value ** 2;
+}
+echo "\n" . sqrt($sum);
+
+$c = 379;
+echo "\n" . round(sqrt($c));
+echo "\n" . round(sqrt($c), 1);
+echo "\n" . round(sqrt($c), 2);
+
+$result = ['floor' => floor(sqrt(587)), 'ceil' => ceil(sqrt(587))];
+echo "\n" . json_encode($result);
+
+$array = [4, -2, 5, 19, -130, 0, 10];
+echo "\nMin: " . min($array);
+echo "\nMax: " . max($array);
+
+echo "\nСлучайное число от 1 до 100: " . rand(1, 100);
+
+$random_numbers = [];
+for ($i = 0; $i < 10; $i++) {
+    $random_numbers[] = rand();
+}
+echo "\nСлучайные числа: " . implode(", ", $random_numbers);
+
+$a = 5;
+$b = 8;
+echo "\nМодуль разности $a и $b: " . abs($a - $b);
+
+$array = [1, 2, -1, -2, 3, -3];
+foreach ($array as &$value) {
+    $value = abs($value);
+}
+unset($value);
+echo "\nМассив с положительными числами: " . implode(", ", $array);
+
+$num = 30;
+$divisors = [];
+for ($i = 1; $i <= $num; $i++) {
+    if ($num % $i == 0) {
+        $divisors[] = $i;
+    }
+}
+echo "\nДелители числа $num: " . implode(", ", $divisors);
+
+$array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+$sum = 0;
+$count = 0;
+foreach ($array as $value) {
+    $sum += $value;
+    $count++;
+    if ($sum > 10) {
+        break;
+    }
+}
+echo "\nКоличество элементов для суммы > 10: $count";
 ?>
