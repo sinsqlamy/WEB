@@ -174,7 +174,6 @@ function sumDigits($curr) {
 echo sumDigits(803) , "\n";
 
 // 17
-
 // 1. Заполнение массива
 $array = [];
 for ($i = 1; $i <= 5; $i++) {
@@ -235,5 +234,35 @@ echo "Последний элемент массива: " . end($arr) . "\n";
 prev($arr);
 echo "Предпоследний элемент массива: " . current($arr) . "\n";
 
+// 18
+function isSumGreaterThanTen($num1, $num2) {
+    return ($num1 + $num2 > 10) ? true : false;
+}
+
+function areNumbersEqual($num1, $num2) {
+    return ($num1 == $num2) ? true : false;
+}
+
+$test = 0;
+echo ($test == 0) ? 'верно' : '';
+
+$age = 76;
+if ($age < 10 || $age > 99) {
+    echo "Число вне диапазона.";
+} else {
+    $sum = array_sum(str_split($age));
+    if ($sum <= 9) {
+        echo "Сумма цифр однозначна.";
+    } else {
+        echo "Сумма цифр двузначна.";
+    }
+}
+
+echo "\n";
+
+$arr = [1, 2, 3];
+if (count($arr) == 3) {
+    echo "Сумма элементов массива: " . array_sum($arr);
+}
 
 ?>
