@@ -271,4 +271,26 @@ $rows = 20; // количество рядов для пирамиды
 for ($i = 1; $i <= $rows; $i++) {
     echo str_repeat('x', $i) . "\n";
 }
+
+// 20
+$array = [1, 2, 3, 4, 5];
+$average = array_sum($array) / count($array);
+echo "Среднее арифметическое: $average\n";
+
+$sum = (1 + 100) * 100 / 2;
+echo "Сумма чисел от 1 до 100: $sum\n";
+
+$array = [4, 9, 16, 25];
+$squareRoots = array_map('sqrt', $array);
+print_r($squareRoots);
+
+$letters = range('a', 'z');
+$numb = range(1, 26);
+$abcArray = array_combine($letters, $numb);
+print_r($abcArray);
+
+$string = '1234567890';
+$numbers = str_split($string, 2); // разбиваем строку на пары чисел
+$sum = array_sum($numbers); // суммируем пары чисел
+echo "Сумма пар чисел: $sum\n";
 ?>
